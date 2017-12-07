@@ -5,8 +5,8 @@ import random
 # main code
 
 # the following is user input
-amountoftimes = input("How many passwords would you like generated? ") # number of passwords to be generated
-pw_length = input("What's the length of characters in your password? ") # the numbers of charecters for your password
+amountoftimes = input("How many passwords would you like generated? ") 
+pw_length = input("What's the length of characters in your password? ") 
 lowercasetimes = input("Lowercase letters? ")
 numbertimes = input("Numbers? ")
 upcasetimes = input("Upper case? ")
