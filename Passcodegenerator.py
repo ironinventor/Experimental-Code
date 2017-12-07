@@ -1,3 +1,4 @@
+#Python password generator script using basic principles
 
 # imports
 import random
@@ -6,17 +7,16 @@ import random
 
 # the following is user input
 amountoftimes = input("How many passwords would you like generated? ") 
-pw_length = input("What's the length of characters in your password? ") 
+Passcode_length = input("What's the length of characters in your password? ") 
 lowercasetimes = input("Lowercase letters? ")
 numbertimes = input("Numbers? ")
 upcasetimes = input("Upper case? ")
 
-# does calculations based on how many of what types of password you wany
+# works out passcpasscoode
 lowercase = "abcdefghijklmnopqrstuvwxyz" * lowercasetimes
 number = "0123456789" * numbertimes
 upcase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" * upcasetimes
 
-# if/else statement to make strings
 if (lowercasetimes == 0):
 	alphabet = number + upcase
 elif (numbertimes == 0):
@@ -26,16 +26,16 @@ elif (upcasetimes == 0):
 else:
 	alphabet = lowercase + number + upcase
 
-# opens the file 'passwords.txt' for writing
+# creates the file 'passwords.txt' for writing
 file = open("passwords.txt","w")
 
 # generates the passwords
 for i in range(amountoftimes):
 	mypw = ""
-	for i in range(pw_length):
+	for i in range(Passcode_length):
 	    next_index = random.randrange(len(alphabet))
 	    mypw = mypw + alphabet[next_index]
 
 	file.write(mypw + '\n') # writes the password in the file
 
-file.close() # closes the file when complete
+file.close() # closes the file when complete and saves to file
