@@ -3,7 +3,6 @@
 # imports
 import random
 
-# main code
 
 # the following is user input
 amountoftimes = input("How many passwords would you like generated? ") 
