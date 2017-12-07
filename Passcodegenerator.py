@@ -5,7 +5,7 @@ import random
 
 
 # the following is user input
-amountoftimes = input("How many passwords would you like generated? ") 
+Passwordamount = input("How many passwords would you like generated? ") 
 Passcode_length = input("What's the length of characters in your password? ") 
 lowercasetimes = input("Lowercase letters? ")
 numbertimes = input("Numbers? ")
@@ -29,12 +29,12 @@ else:
 file = open("passwords.txt","w")
 
 # generates the passwords
-for i in range(amountoftimes):
-	mypw = ""
+for i in range(Passwordamount):
+	mypc = ""
 	for i in range(Passcode_length):
 	    next_index = random.randrange(len(alphabet))
-	    mypw = mypw + alphabet[next_index]
+	    mypc = mypc + alphabet[next_index]
 
-	file.write(mypw + '\n') # writes the password in the file
+	file.write(mypc + '\n') # writes the password
 
 file.close() # closes the file when complete and saves to file
