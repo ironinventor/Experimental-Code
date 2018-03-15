@@ -1,17 +1,14 @@
-#Python password generator script using basic principles
 
-# imports
+@Author Ironinventor
 import random
 
 
-# the following is user input
 Passwordamount = input("How many passwords would you like generated? ") 
 Passcode_length = input("What's the length of characters in your password? ") 
 lowercasetimes = input("Lowercase letters? ")
 numbertimes = input("Numbers? ")
 upcasetimes = input("Upper case? ")
 
-# works out passcpasscoode
 lowercase = "abcdefghijklmnopqrstuvwxyz" * lowercasetimes
 number = "0123456789" * numbertimes
 upcase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" * upcasetimes
@@ -24,8 +21,7 @@ elif (upcasetimes == 0):
 	alphabet = number + lowercase
 else:
 	alphabet = lowercase + number + upcase
-
-# creates the file 'passwords.txt' for writing
+	
 file = open("passwords.txt","w")
 
 # generates the passwords
